@@ -48,6 +48,20 @@ services:
     networks:
       - net
 
+  # React Js dev
+  reactjs_dev:
+    container_name: reactjs_dev
+    build:
+      context: ./sources/frontend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      - ./sources/frontend:/app
+    networks:
+      - net
+
   #MySQL Service
   mysql:
     image: mysql:8
