@@ -7,3 +7,5 @@ apt install docker-compose
 
 # install login to docker hub
 sudo apt install gnupg2 pass
+
+mkdir SUM_CMS
